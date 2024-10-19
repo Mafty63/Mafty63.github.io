@@ -1,10 +1,10 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {Model} from "./Model";
-import {loadExternalResource} from "../loadExternalResource";
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Model } from "./Model";
+import { loadExternalResource } from "../loadExternalResource";
 
-declare var loadlive2d : any;
-declare var Live2D : any;
-declare var data : any;
+declare var loadlive2d: any;
+declare var Live2D: any;
+declare var data: any;
 
 @Component({
 	selector: 'app-waifu',
@@ -13,16 +13,16 @@ declare var data : any;
 	styleUrls: ['./waifu.component.css']
 })
 export class WaifuComponent implements OnInit {
-	private i : any;
-	private s : any = false;
+	private i: any;
+	private s: any = false;
 
 	private waifuTips = data.waifu.tips;
-	public waifuTipsActive : boolean = true;
-	public waifuTipMessage : string = "";
-	private model = new Model(data.waifu.modelList,data.waifu.messages);
+	public waifuTipsActive: boolean = true;
+	public waifuTipMessage: string = "";
+	private model = new Model(data.waifu.modelList, data.waifu.messages);
 	public bottom: string = "-400px";
 
-	private r(e: any, t: number, o: any){
+	private r(e: any, t: number, o: any) {
 		let waifuText = sessionStorage.getItem("waifu-text");
 		if (!e || (waifuText && waifuText > o)) return;
 
@@ -41,14 +41,14 @@ export class WaifuComponent implements OnInit {
 		}, t);
 	}
 
-	private async d(e : any, t : any, n : any) {
+	private async d(e: any, t: any, n: any) {
 		localStorage.setItem("modelId", e);
 		localStorage.setItem("modelTexturesId", t);
 		this.r(n, 4e3, 10);
-		loadlive2d("live2d", this.model.get(parseInt(e),parseInt(t)));
+		loadlive2d("live2d", this.model.get(parseInt(e), parseInt(t)));
 	}
 
-	private waifuTools : any = {
+	private waifuTools: any = {
 		'fa-comment': (event: any) => {
 			event.preventDefault();
 			fetch("https://api.quotable.io/random?maxLength=55").then(e => {
@@ -92,7 +92,7 @@ export class WaifuComponent implements OnInit {
 		},
 		'fa-info-circle': (event: any) => {
 			event.preventDefault();
-			open("https://github.com/JayantGoel001/JayantGoel001.github.io/");
+			open("https://github.com/Mafty63/Mafty63.github.io/");
 		},
 		'fa-times': (event: any) => {
 			event.preventDefault();
@@ -108,58 +108,58 @@ export class WaifuComponent implements OnInit {
 		}
 	}
 
-	private windowEvent : any = {
-		'mousemove' : () => {
+	private windowEvent: any = {
+		'mousemove': () => {
 			this.s = true;
 		},
-		'keydown' : () => {
+		'keydown': () => {
 			this.s = true;
 		},
-		'copy' : () => {
+		'copy': () => {
 			this.r("What have you copied? Remember to add the source when reprinting!", 6e3, 9);
 		},
-		'visibilitychange' : () => {
-			if(document.hidden) {
+		'visibilitychange': () => {
+			if (document.hidden) {
 				this.r("Wow, you are finally back!", 6e3, 9);
 			}
 		}
 	}
 
-	public waifuToolsKeys = ['fa-comment','fa-user-circle','fa-street-view','fa-camera-retro','fa-info-circle','fa-times'];
+	public waifuToolsKeys = ['fa-comment', 'fa-user-circle', 'fa-street-view', 'fa-camera-retro', 'fa-info-circle', 'fa-times'];
 
-	public getRandomValue(e : any) {
+	public getRandomValue(e: any) {
 		return Array.isArray(e) ? e[Math.floor(Math.random() * e.length)] : e;
 	}
 
-	private loadWidget() : void{
+	private loadWidget(): void {
 		localStorage.removeItem("waifu-display");
 		sessionStorage.removeItem("waifu-text");
 
 		this.bottom = "0";
 
-		let a : any;
-		let l : any = ["Long time no see, life flies so fast...", "I wanted to know How long have you been ignoring people?", "Hi! Come and play with me!", "Hammer your chest with small fists!", "Remember to add StackOverflow to your Bookmarks!"];
+		let a: any;
+		let l: any = ["Long time no see, life flies so fast...", "I wanted to know How long have you been ignoring people?", "Hi! Come and play with me!", "Hammer your chest with small fists!", "Remember to add StackOverflow to your Bookmarks!"];
 
-		for(let event in this.windowEvent) {
-			window.addEventListener(event,this.windowEvent[event]);
+		for (let event in this.windowEvent) {
+			window.addEventListener(event, this.windowEvent[event]);
 		}
 
 		setInterval(() => {
-			if (this.s){
+			if (this.s) {
 				this.s = false;
 				clearInterval(a);
 				a = null;
-			}else {
-				if (!a){
-					a = setInterval(()=>{
-						this.r(this.getRandomValue(l),6e3,9);
-					},2e4);
+			} else {
+				if (!a) {
+					a = setInterval(() => {
+						this.r(this.getRandomValue(l), 6e3, 9);
+					}, 2e4);
 				}
 			}
 		}, 1e3);
 
-		for (let tool in this.waifuTools){
-			document.querySelector(`#waifu-tool .${tool}`)!!.addEventListener("click",this.waifuTools[tool]);
+		for (let tool in this.waifuTools) {
+			document.querySelector(`#waifu-tool .${tool}`)!!.addEventListener("click", this.waifuTools[tool]);
 		}
 		let e;
 		if ("/" === location.pathname) {
@@ -174,27 +174,27 @@ export class WaifuComponent implements OnInit {
 		}
 		this.r(e, 7e3, 8);
 
-		let modelID :any = localStorage.getItem("modelId");
-		let modelTextureID :any = localStorage.getItem("modelTexturesId");
+		let modelID: any = localStorage.getItem("modelId");
+		let modelTextureID: any = localStorage.getItem("modelTexturesId");
 
 		if (!modelID) {
 			modelID = 1;
 			modelTextureID = 52;
 		}
-		this.d(modelID, modelTextureID, null).then(_ => {});
+		this.d(modelID, modelTextureID, null).then(_ => { });
 
-		let listener = (t : any) => {
-				for (let { selector: o, text: a } of this.waifuTips.mouseover) {
-					if (t.target.matches(o)) {
-						a = this.getRandomValue(a).replace("{text}", t.target.innerText);
-						return this.r(a, 4e3, 8);
-					}
+		let listener = (t: any) => {
+			for (let { selector: o, text: a } of this.waifuTips.mouseover) {
+				if (t.target.matches(o)) {
+					a = this.getRandomValue(a).replace("{text}", t.target.innerText);
+					return this.r(a, 4e3, 8);
 				}
+			}
 		}
 		window.addEventListener("mouseover", listener);
-		window.addEventListener("click",listener);
+		window.addEventListener("click", listener);
 
-		for (let { date: date, text: t } of this.waifuTips.seasons){
+		for (let { date: date, text: t } of this.waifuTips.seasons) {
 			const o = new Date();
 			const a = date.split("-")[0];
 			const i = date.split("-")[1] || a;
@@ -212,10 +212,10 @@ export class WaifuComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		Promise.all([loadExternalResource("assets/js/live2d.min.js")]).then(()=>{
+		Promise.all([loadExternalResource("assets/js/live2d.min.js")]).then(() => {
 			this.changeDetectorRef.detectChanges();
 			this.loadWidget();
-		}).then(()=>{
+		}).then(() => {
 			console.log(`
 	  く__,.ヘヽ.        /  ,ー､ 〉
 			   ＼ ', !-─‐-i  /  /´
