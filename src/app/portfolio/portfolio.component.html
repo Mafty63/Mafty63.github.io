@@ -11,8 +11,8 @@
         </div>
         <div class="row container-grid mt-4 pt-2">
             <div *ngFor="let project of portfolioData" class="wow {{project['animationClass']}} col-lg-4 spacing"
-                [attr.data-wow-delay]="[project['delay']]"><ng-template #title><strong> <em>Click To Checkout My
-                            Code.</em> </strong></ng-template><a class="item-box m-2"
+                [attr.data-wow-delay]="[project['delay']]"><ng-template #title><strong> <em>Click To See More
+                            Details.</em> </strong></ng-template><a class="item-box m-2"
                     [placement]="[project['placement']]" [ngbTooltip]="title" rel="noreferrer"
                     aria-label="project(opens in a new tab)" href="https://github.com/Mafty63/{{project['project']}}"
                     target="_blank"><img class="item-container img-fluid mx-auto"
