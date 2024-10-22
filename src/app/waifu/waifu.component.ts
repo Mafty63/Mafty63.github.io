@@ -16,10 +16,10 @@ export class WaifuComponent implements OnInit {
 	private i: any;
 	private s: any = false;
 
-	private waifuTips = data.waifu.tips;
+	private waifuTips = data.Waifu.tips;
 	public waifuTipsActive: boolean = true;
 	public waifuTipMessage: string = "";
-	private model = new Model(data.waifu.modelList, data.waifu.messages);
+	private model = new Model(data.Waifu.modelList, data.Waifu.messages);
 	public bottom: string = "-400px";
 
 	private r(e: any, t: number, o: any) {
