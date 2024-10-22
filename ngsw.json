@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1729445288170,
+  "timestamp": 1729565710545,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "/58.a26c5e562db24455.js",
+        "/529.8540d079d2be4525.js",
         "/705.fa2f847a68798c6c.js",
         "/favicon.ico",
         "/index.html",
-        "/main.8e9198c2f205ded3.js",
+        "/main.e36b56d7866d127f.js",
         "/polyfills.e3ad3c1e55aac6e7.js",
-        "/runtime.4213e88dc9e8ed0c.js",
-        "/scripts.6727e5b3d0c47eaa.js",
+        "/runtime.2f30531ac9102ced.js",
+        "/scripts.3f309fb150cd81d1.js",
         "/styles.61b0674320f41b27.css"
       ],
       "patterns": []
@@ -65,6 +65,8 @@
         "/assets/images/Profile-pic.webp",
         "/assets/images/about-bg.svg",
         "/assets/images/achievement/DataScience.webp",
+        "/assets/images/achievement/Gemastik 2023.webp",
+        "/assets/images/achievement/Gemastik 2024.webp",
         "/assets/images/achievement/HackerRank.webp",
         "/assets/images/achievement/Hacktoberfest.webp",
         "/assets/images/background-image.jpg",
@@ -119,13 +121,13 @@
   "dataGroups": [],
   "hashTable": {
     "/404.4ed6dad8c73a710d.webp": "c55234174be110511c6fdf693770c8dde7f046c1",
-    "/58.a26c5e562db24455.js": "56b9014c7cb8e6375f49ce9db722166d2ee7df0c",
+    "/529.8540d079d2be4525.js": "5f37ac892bffaa44e38dd08bfba18dba358fbb8e",
     "/705.fa2f847a68798c6c.js": "2c80d4d40ac77292be8b99a1b03396e59bd59a53",
     "/about-bg.7c80c2136d4a089d.svg": "2f4e718723ee93de8349ca37808a09b0d5bbce6c",
     "/apple-touch-icon.png": "8218fb45b26dea0f140a388bcc06c918d08f1d1d",
     "/assets/css/animate.min.css": "4ce4e9a3c083a51cc474b62f755108b9c81e5881",
     "/assets/css/font-awesome.min.css": "db3c436a1c87b1fd43a10e820ad628f93df90bce",
-    "/assets/data.min.js": "2c34e03ffefe69609a55d89295e8a74d37fe1e5e",
+    "/assets/data.min.js": "405b6912f65d3fd418ea93deae0e74f8e47c9352",
     "/assets/fonts/BlackOpsOne.eot": "a922adecfeba3ea43f4e644183728cdd1692dbb4",
     "/assets/fonts/BlackOpsOne.svg": "7c13e5df4822e44cfe78f1291757ef7fc4af6d8a",
     "/assets/fonts/BlackOpsOne.ttf": "024e07e45eefb57d4e55fffc082711c2d653e941",
@@ -154,6 +156,8 @@
     "/assets/images/Profile-pic.webp": "b4962dfea3e0491a98e71092392a72bab8009029",
     "/assets/images/about-bg.svg": "2f4e718723ee93de8349ca37808a09b0d5bbce6c",
     "/assets/images/achievement/DataScience.webp": "d17f698e61b409b529a209fcf6620a9b415dbd7e",
+    "/assets/images/achievement/Gemastik 2023.webp": "0266cecc5dc73520344c39b9a7d7edcd62405152",
+    "/assets/images/achievement/Gemastik 2024.webp": "85d23403f2ee59ce63dbc22c4c5903a9b1c2d3bd",
     "/assets/images/achievement/HackerRank.webp": "0d4df017c764d5e16a7e847e43bd21af8f061c26",
     "/assets/images/achievement/Hacktoberfest.webp": "1dc3b04d84f75f5620f84b0f97ca1c913f1d36ee",
     "/assets/images/background-image.jpg": "cf7409cb59d89e1b31741266201ccaa6e7514c84",
@@ -181,7 +185,7 @@
     "/assets/js/particles.min.js": "eb66092d351ebbffc2eaef1e3cd380a65115aa88",
     "/assets/js/typed.min.js": "0144d808555290a2e271af0d09114d4b97b2606b",
     "/assets/js/vanilla-tilt.min.js": "645c5d1efdfee330c32301d0f03a14a7ce9784f8",
-    "/assets/js/wow.min.js": "6f386b5d2fa575a0e267d6de7bc73c0e5166fb36",
+    "/assets/js/wow.min.js": "433ecbea2eac37104c8e924e781caa5aadfbd587",
     "/bgimg.2fffc780590c77c6.webp": "825d33dda8bbc1f4a7f211b168428414d32e517d",
     "/fa-brands-400.a9db39c081f4c22d.woff2": "4239ce052e11ecec05000129969968aa3ea5786d",
     "/fa-brands-400.b6fc96a61a67ef49.woff": "8bdc4f706ecbd2a57cc35576a19ca61f8dff123a",
@@ -201,12 +205,12 @@
     "/favicon-16x16.png": "897f537be9e5741b714b45fab9d24a28830f22bd",
     "/favicon-32x32.png": "053c8fbd3b9a6acc1b02f32172933ddad15cb0c9",
     "/favicon.ico": "61ea5e23b3647a514301fbc841632aa209c0902f",
-    "/index.html": "773ff9129e88c94f16f6a0511d86b6c948bb8ef5",
-    "/main.8e9198c2f205ded3.js": "8da22084c7159d5e95a7918f1b299404a9ed70fa",
+    "/index.html": "70ed425822ca3b468accc237c1d18d8666e47fc4",
+    "/main.e36b56d7866d127f.js": "63fe5d5c2a4d6a6d006041da545db4f738453a54",
     "/polyfills.e3ad3c1e55aac6e7.js": "2899c1141ebc8b9fc2e50e21b279e2cff76855f7",
     "/quote-img.5e642c8eee792695.webp": "27936458251d3dbc6d1eecfc1e501ab93a3838bb",
-    "/runtime.4213e88dc9e8ed0c.js": "1467953a05d9d859f6fcd9c4fd32ffb265ce48d9",
-    "/scripts.6727e5b3d0c47eaa.js": "24ec94a2280a2371303b48eda2fad49af0acc5e7",
+    "/runtime.2f30531ac9102ced.js": "c6bb1123310ff13b949ed8db4c32f186d22bdff9",
+    "/scripts.3f309fb150cd81d1.js": "346a57b841f6d82e625f92676902103a3eb7ef17",
     "/styles.61b0674320f41b27.css": "a8112361291e8a53e8493502f3dcbe8841480cc4"
   },
   "navigationUrls": [
